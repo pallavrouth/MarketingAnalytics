@@ -11,3 +11,6 @@ Data sources:
 9. Retail transactions (Market Basket/RFM): [retail](https://www.kaggle.com/datasets/ulrikthygepedersen/online-retail-dataset)
 10. Movie recommendation (Collaborative filtering): [movies](https://www.kaggle.com/code/ibtesama/getting-started-with-a-movie-recommendation-system)
 11. Customer churn (Decision Trees/Random forest/SVM/Classification): [churn](https://www.kaggle.com/datasets/mathchi/churn-for-bank-customers)
+12. Twitter company (Topic modeling/sentiment analysis): [company-tweet](https://www.kaggle.com/datasets/omermetinn/tweets-about-the-top-companies-from-2015-to-2020)
+13. Customer support (Topic modeling/sentiment analysis): [custsupport](https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter)
+14. Amazon reviews (Topic modeling/sentiment analysis): [amazonreviews](https://www.kaggle.com/datasets/arhamrumi/amazon-product-reviews)
