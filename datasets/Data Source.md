@@ -14,3 +14,4 @@ Data sources:
 12. Twitter company (Topic modeling/sentiment analysis): [company-tweet](https://www.kaggle.com/datasets/omermetinn/tweets-about-the-top-companies-from-2015-to-2020)
 13. Customer support (Topic modeling/sentiment analysis): [custsupport](https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter)
 14. Amazon reviews (Topic modeling/sentiment analysis): [amazonreviews](https://www.kaggle.com/datasets/arhamrumi/amazon-product-reviews)
+15. Customer transactions I (Vizualizations/Data manipulation): [transaction_transactions](https://www.kaggle.com/datasets/archit9406/customer-transaction-dataset?select=KPMG_VI_New_raw_data_update_final.xlsx)
