@@ -1,31 +1,42 @@
-# Project Setup
+# CLAUDE.md — Session Operations
+# Marketing Analytics | Instructor Configuration
+# DO NOT MODIFY THIS FILE
 
-## On every session start, do the following automatically:
+## Overview
+This file configures how Claude Code behaves during every session for this course.
+It runs automatically at the start of each session. All logging is mandatory.
 
-1. Run in terminal: python3 -m jupyter lab --port 8888 --NotebookApp.token='' --NotebookApp.password='' --NotebookApp.disable_check_xsrf=True
-2. Run in terminal: mkdir -p analysis
-3. Call setup_notebook(server_url="http://localhost:8888/lab", notebook_path="analysis/YYYYMMDD_session.ipynb")
-4. List available .dta files in Data/ and ask the user which one to work with
-5. Once confirmed, add and execute following in Cell 1:
+---
 
-import sys
-sys.path.insert(0, '/Applications/Stata/utilities')
-from pystata import config
-config.init('se')
-from pystata import stata
-import os
-print(os.getcwd())
-import pandas as pd
-import numpy as np
-from plotnine import *
+## Session Initialization
 
-6. Add and execute following Cell 2:
+At the start of every session:
+1. Create a `/logs` folder in the project directory if it does not already exist
+2. Create a `/outputs` folder in the project directory if it does not already exist
+3. Begin logging immediately — see Logging Requirements below
+4. Read SKILLS.md before executing any student instruction
+5. Confirm to the student: "Session started. Logging is active. SKILLS.md loaded."
 
-stata.run('use "/full/path/to/Data/FILENAME.dta", clear', quietly=False, echo=True)
-df = pd.read_stata('/full/path/to/Data/FILENAME.dta')
+## Logging Requirements
 
-## Workflow
-- All Stata work goes through PyStata using stata.run()
-- Estimationing models and variable creation for estimating models use stata.run()
-- Always use quietly=False, echo=True in every stata.run() call
-- Everything else (exploration, summaries, plots, data manipulation) use pandas/numpy/plotnine
+### 1. Prompt Log — `/logs/prompt_log.md`
+Append every student prompt to this file in the following format:
+
+```
+---
+[TIMESTAMP] STUDENT PROMPT
+<exact text of the student's prompt>
+```
+
+No prompt is ever omitted. Logging happens before execution.
+
+## Output Structure
+
+All generated code files are saved to `/outputs` with descriptive filenames.
+Example: `01_load_data.py`, `02_clean_data.py`, `03_transform_variables.py`
+
+## Integrity Notice
+
+This file is provided by the instructor and must not be modified.
+Any modification to this file or the `/logs` folder contents is an academic integrity violation.
+Logging gaps or missing files will be treated as incomplete submissions.
